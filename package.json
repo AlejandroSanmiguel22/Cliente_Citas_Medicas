@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node tu_archivo_de_inicio.js"
+  },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
   }
