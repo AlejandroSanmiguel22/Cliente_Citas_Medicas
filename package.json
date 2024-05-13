@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node src/javaScript/index.js"
+    "start": "node /src/javaScript/index.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
