@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             });
             console.log('HTML de la tabla:', tablaHTML);
-            window.parent.postMessage(tablaHTML, 'http://127.0.0.1:5500');
+            window.parent.postMessage(tablaHTML, 'https://gestioncitasmedicas-production.up.railway.app');
         } else {
             throw new Error('No se recibieron datos de citas válidos');
         }
