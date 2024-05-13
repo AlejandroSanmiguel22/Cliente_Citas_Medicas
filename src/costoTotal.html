@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script src="/src/javaScript/costo.js"></script>
+    <script src="/src/javaScript/index.js"></script>
+    <title>Costo total</title>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<!-- Inicio navegación superior -->
+<header class="bg-custom-color dark:bg-gray-800 shadow-md relative" style="background-color: #F9F8EF;">
+    <div class="container mx-auto flex items-center justify-between px-4 py-2 text-white">
+        <a href="/src/index.html">
+            <img src="img/iconHospital.jpeg" alt="Logo" class="w-30">
+        </a>
+
+        <div class="flex space-x-4 text-black text-2xl gap-6 relative w-3/4">
+            <div class="relative">
+                <a href="#" id="agregar" class="hover:underline">Agregar</a>
+                <div id="opciones-cita"
+                    class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible"
+                    style="background-color: #F9F8EF;">
+                    <a href="/src/addCitaGeneral.html" class="hover:underline block">- Cita General</a>
+                    <a href="/src/consultorio.html" class="hover:underline block">- Consultorio</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#" id="modificar" class="hover:underline">Modificar</a>
+                <div id="opciones-modificar"
+                    class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                    style="background-color: #F9F8EF;">
+                    <a href="/src/modificarCita.html" class="hover:underline block">- Cita</a>
+                    <a href="/src/modificarConsultorio.html" class="hover:underline block">- Consultorio</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#" id="listar" class="hover:underline">Listar</a>
+                <div id="opciones-listar"
+                    class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                    style="background-color: #F9F8EF;">
+                    <a href="/src/listaCitas.html" class="hover:underline block">- Cita</a>
+                    <a href="/src/listaConsultorios.html" class="hover:underline block">- Consultorio</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#" id="eliminar" class="hover:underline">Eliminar</a>
+                <div id="opciones-eliminar"
+                    class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                    style="background-color: #F9F8EF;">
+                    <a href="/src/eliminarCita.html" class="hover:underline block">- Cita</a>
+                    <a href="/src/eliminarConsultorio.html" class="hover:underline block">- Consultorio</a>
+                </div>
+            </div>
+            <div class="relative">
+                <a href="#" id="consultar" class="hover:underline">Consultar</a>
+                <div id="opciones-consultar"
+                    class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                    style="background-color: #F9F8EF;">
+                    <a href="/src/consultarCita.html" class="hover:underline block">- Cita</a>
+                    <a href="/src/consultarConsultorio.html" class="hover:underline block">- Consultorio</a>
+                </div>
+            </div>
+
+            <!--<a href="/src/costoTotal.html" class="hover:underline">Costo Total</a>-->
+            <a href="/src/acerca.html" class="hover:underline">Acerca de</a>
+            <!-- <a href="/src/consultorio.html" class="hover:underline">Con.Especializado</a> -->
+
+
+        </div>
+    </div>
+</header>
+<!-- Fin navegación superior -->
+
+    <!-- Inicio contenido principal -->
+    <div class="flex justify-center items-center mt-6">
+        <img src="/src/img/iconHistorialPaciente.png" alt="Icono historial pacientes" class="mr-4">
+        <h1 class="text-black font-semibold text-2xl">Total costos</h1>
+    </div>
+    <!-- Inicio tabla -->
+    <div class="flex justify-center mt-12 ml-20 mr-20"> <!-- Aumenté el margen superior de la tabla -->
+        <div class="w-full">
+            <!-- Tabla de pacientes -->
+            <table class="table-auto w-full">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 border">ID</th>
+                        <th class="px-4 py-2 border">Nombre</th>
+                        <th class="px-4 py-2 border">Fecha</th>
+                        <th class="px-4 py-2 border">Tipo de cita</th>
+                        <th class="px-4 py-2 border">Costo</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPacientesBody">
+                    <!-- Recupera del Backend -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Fin tabla -->
+    <!-- Campos para resultados de costos -->
+    <div class="flex justify-center mt-6 bg-gray-200 p-4 rounded-lg mb-6">
+        <div class="w-full max-w-md">
+            <div class="mb-2">
+                <label for="totalGeneral" class="text-lg font-medium">Total citas médico general:</label>
+                <input type="number" id="totalGeneral" class="px-2 py-1 border rounded w-full" readonly>
+            </div>
+            <div class="mb-2">
+                <label for="totalEspecialista" class="text-lg font-medium">Total citas médico especialista:</label>
+                <input type="number" id="totalEspecialista" class="px-2 py-1 border rounded w-full" readonly>
+            </div>
+            <div>
+                <label for="costoTotal" class="text-lg font-medium">Costo total:</label>
+                <input type="number" id="costoTotal" class="px-2 py-1 border rounded w-full" readonly>
+            </div>
+        </div>
+    </div>
+    <!-- Fin campos para resultados de costos -->
+
+    <!-- Inicio Footer -->
+<footer class="bg-black text-white py-4 mt-auto">
+    <div class="container mx-auto px-4">
+        <div class="text-white text-2xl text-center">
+            <p>Todos los Derechos Reservados 2024©</p>
+        </div>
+    </div>
+</footer>
+<!-- Fin Footer -->
+</body>
+</html>

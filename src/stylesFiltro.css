@@ -1,0 +1,118 @@
+/* Estilos para el filtro */
+body {
+  font-family: 'ui-sans-serif', system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filtro-header {
+  display: flex;
+  align-items: center;
+}
+
+.filtro-btn {
+  font-family: 'Material Symbols Outlined', sans-serif; /* Tipo de letra del botón */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px; /* Ajuste del relleno */
+  cursor: pointer;
+  margin-right: auto; /* Mueve el botón hacia la derecha */
+}
+.filtro-btn:hover {
+  background-color: #0056b3;
+}
+
+.btnAceptar {
+  font-family: 'ui-sans-serif', sans-serif;
+  font-size: medium;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: inline-block; /* Mostrar el botón en línea */
+}
+
+.btnAceptar:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.filtro-txt {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: auto;
+}
+
+.opciones {
+  margin-top: auto;
+  right: 0;
+  min-width: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px; /* Reducido el padding */
+  z-index: 1;
+  
+}
+
+.seccion {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+}
+
+input[type="text"],
+input[type="range"],
+select {
+  display: inline-block;
+  vertical-align: top;
+}
+
+input[type="range"] {
+  margin-left: 5px;
+}
+
+select {
+  margin-left: 8px;
+}
+
+.costo-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Eliminado el segundo .filtro-txt ya que parece duplicado */
+.filtro-txt {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

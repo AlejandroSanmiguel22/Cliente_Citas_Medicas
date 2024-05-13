@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script src="/src/javaScript/index.js"></script>
+    <title>Modificar Consultorio</title>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<!-- Inicio navegación superior -->
+<header class="bg-custom-color dark:bg-gray-800 shadow-md relative" style="background-color: #F9F8EF;">
+  <div class="container mx-auto flex items-center justify-between px-4 py-2 text-white">
+      <a href="/src/index.html">
+          <img src="img/iconHospital.jpeg" alt="Logo" class="w-30">
+      </a>
+
+      <div class="flex space-x-4 text-black text-2xl gap-6 relative w-3/4">
+          <div class="relative">
+              <a href="#" id="agregar" class="hover:underline">Agregar</a>
+              <div id="opciones-cita"
+                  class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible"
+                  style="background-color: #F9F8EF;">
+                  <a href="/src/addCitaGeneral.html" class="hover:underline block">- Cita General</a>
+                  <a href="/src/consultorio.html" class="hover:underline block">- Consultorio</a>
+              </div>
+          </div>
+          <div class="relative">
+              <a href="#" id="modificar" class="hover:underline">Modificar</a>
+              <div id="opciones-modificar"
+                  class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                  style="background-color: #F9F8EF;">
+                  <a href="/src/modificarCita.html" class="hover:underline block">- Cita</a>
+                  <a href="/src/modificarConsultorio.html" class="hover:underline block">- Consultorio</a>
+              </div>
+          </div>
+          <div class="relative">
+              <a href="#" id="listar" class="hover:underline">Listar</a>
+              <div id="opciones-listar"
+                  class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                  style="background-color: #F9F8EF;">
+                  <a href="/src/listaCitas.html" class="hover:underline block">- Cita</a>
+                  <a href="/src/listaConsultorios.html" class="hover:underline block">- Consultorio</a>
+              </div>
+          </div>
+          <div class="relative">
+              <a href="#" id="eliminar" class="hover:underline">Eliminar</a>
+              <div id="opciones-eliminar"
+                  class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                  style="background-color: #F9F8EF;">
+                  <a href="/src/eliminarCita.html" class="hover:underline block">- Cita</a>
+                  <a href="/src/eliminarConsultorio.html" class="hover:underline block">- Consultorio</a>
+              </div>
+          </div>
+          <div class="relative">
+              <a href="#" id="consultar" class="hover:underline">Consultar</a>
+              <div id="opciones-consultar"
+                  class="absolute bg-custom-color rounded-md shadow-md py-2 w-48 text-center right-0 z-10 transition-all duration-300 opacity-0 invisible mt-10"
+                  style="background-color: #F9F8EF;">
+                  <a href="/src/consultarCita.html" class="hover:underline block">- Cita</a>
+                  <a href="/src/consultarConsultorio.html" class="hover:underline block">- Consultorio</a>
+              </div>
+          </div>
+
+          <!--<a href="/src/costoTotal.html" class="hover:underline">Costo Total</a>-->
+          <a href="/src/acerca.html" class="hover:underline">Acerca de</a>
+          <!-- <a href="/src/consultorio.html" class="hover:underline">Con.Especializado</a> -->
+
+
+      </div>
+  </div>
+</header>
+<!-- Fin navegación superior -->
+
+
+<div class="flex justify-center items-center m-6">
+    <img src="/src/img/iconPersona.jpeg" alt="modificar cita" class="mr-4">
+    <h1 class="text-black font-semibold text-2xl">Modificar Cita</h1>
+</div>
+
+<!-- Inicio contenido principal -->
+<div class="max-w-lg mx-auto mb-6">
+    <form id="myForm" class="grid grid-cols-2 gap-4">
+      <!-- Campo No. Identificación -->
+      <div class="col-span-2">
+        <label for="numeroConsultorio" class="block text-lg font-semibold text-black">No. Identificación</label>
+        <input type="text" id="numeroConsultorio" name="numeroConsultorio" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border border-gray-400 rounded-md hover:border-indigo-500">
+      </div>
+      <!-- Campo Nombre -->
+      <div>
+        <label for="seccion" class="block text-lg font-semibold text-black">Seccion</label>
+        <input type="text" id="seccion" name="seccion" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border border-gray-400 rounded-md hover:border-indigo-500">
+      </div>
+      
+      <!-- Botón Guardar -->
+      <div class="col-span-2">
+        <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+<!-- Fin contenido principal -->
+
+
+<!-- Inicio Footer -->
+<footer class="bg-black text-white py-4 mt-auto">
+    <div class="container mx-auto px-4">
+        <div class="text-white text-2xl text-center">
+            <p>Todos los Derechos Reservados 2024©</p>
+        </div>
+    </div>
+</footer>
+<!-- Fin Footer -->
+
+<script src="/src/javaScript/modificarConsultorioForm.js"></script>
+
+</body>
+</html>

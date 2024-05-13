@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filtro de Búsqueda</title>
+<link rel="stylesheet" href="stylesFiltro.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="filtro-header">
+    <span class="filtro-txt">Filtro de Búsqueda</span>
+    <button class="filtro-btn">&#xe429;</button>
+  </div>
+  <div class="opciones" style="display: none;">
+    <div class="seccion">
+      <label for="filtroID">ID:</label>
+      <input type="text" id="filtroID">
+    </div>
+    <div class="seccion">
+      <label for="filtroNombre">Nombre:</label>
+      <input type="text" id="filtroNombre">
+    </div>
+    <div class="btnAceptar">
+      <button id="btnAceptar" class="btnAceptar">Aceptar</button>
+
+    </div>
+    
+
+  </div>
+</div>
+
+<script src="scriptFiltro.js"></script> <!-- Enlace al archivo JavaScript externo -->
+</body>
+</html>
