@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("else");
         }
 
+        console.log("URL generada: ", url);
+
         fetch(url)
     .then(response => {
         if (!response.ok) {
