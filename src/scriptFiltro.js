@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const btnAceptar = document.getElementById("btnAceptar");
     btnAceptar.addEventListener("click", function () {
-        const id = document.getElementById("filtroID").value;
-        const nombre = document.getElementById("filtroNombre").value;
+        const numeroIdentificacion = document.getElementById("filtroID").value;
+        const nombrePaciente = document.getElementById("filtroNombre").value;
         const costoMinimo = document.getElementById("filtroCostoMin").value || 0;
         const costoMaximo = document.getElementById("filtroCostoMax").value;
         const tipoCita = document.getElementById("tipoCita").value;
 
         const queryParams = new URLSearchParams();
-        if (id) queryParams.append('id', id);
-        if (nombre) queryParams.append('nombre', nombre);
+        if (numeroIdentificacion) queryParams.append('id', numeroIdentificacion);
+        if (nombrePaciente) queryParams.append('nombre', nombrePaciente);
         if (costoMinimo) queryParams.append('costoMinimo', costoMinimo);
         if (costoMaximo) queryParams.append('costoMaximo', costoMaximo);
         if (tipoCita) queryParams.append('tipo', tipoCita);
