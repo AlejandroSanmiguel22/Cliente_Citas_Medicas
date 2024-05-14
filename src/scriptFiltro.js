@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
     })
     .then(citas => {
+        console.log('Datos recibidos:', citas);
         // Verificar si las citas son un array y no está vacío
         if (Array.isArray(citas) && citas.length > 0) {
             console.log('Datos recibidos:', citas);
