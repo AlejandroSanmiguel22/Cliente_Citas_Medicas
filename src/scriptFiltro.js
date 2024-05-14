@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (costoMaximo) queryParams.append('costoMaximo', costoMaximo);
         if (tipoCita) queryParams.append('tipo', tipoCita);
 
-        let url = 'https://gestioncitasmedicas-production.up.railway.app/citas';
+        let url = 'https://gestioncitasmedicas-production.up.railway.app/citas/filtro';
         if (queryParams.toString()) {
             url += '?' + queryParams.toString();
             console.log("IF");
