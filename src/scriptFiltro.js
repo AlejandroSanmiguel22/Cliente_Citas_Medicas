@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             });
             console.log('HTML de la tabla:', tablaHTML);
-            window.parent.postMessage(tablaHTML, 'https://gestioncitasmedicas-production.up.railway.app');
+            window.parent.postMessage(tablaHTML, 'https://zingy-parfait-e3c17a.netlify.app');
         } else {
             throw new Error('No se recibieron datos de citas válidos');
         }
